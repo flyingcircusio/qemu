@@ -108,7 +108,7 @@ static void cd_data_to_raw(uint8_t *buf, int lba)
 static int
 cd_read_sector_sync(IDEState *s, int lba, uint8_t *buf)
 {
-    IDEState *s = opaque;
+    int ret;
 
 #ifdef DEBUG_IDE_ATAPI
     printf("cd_read_sector_sync: lba=%d\n", lba);
